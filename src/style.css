@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+h1.pagetitle {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: white;
+}
+p.pagepara {
+  color: white;
+  margin-bottom:26px;
+}
+.popup {
+  display: block;
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  margin: auto 0;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
