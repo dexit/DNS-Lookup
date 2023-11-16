@@ -65,7 +65,10 @@ export default function MyComponent() {
               }`}
               onClick={() => !fetchingStatus[domain] && handleCardClick(domain)}
             >
-              <div className="font-bold">{domain}</div>
+              <div className="font-bold">{domain}  
+              {domainData[domain]?.Answer && (
+                <span> ({domainData[domain].Answer.length})</span>
+              )}</div>
               {fetchingStatus[domain] && <div className="spinner mt-2"></div>}
             </div>
           ))}
@@ -79,7 +82,7 @@ export default function MyComponent() {
               Close
             </button>
             <dl className="mt-4">
-            
+            {Object.entries(selectedDomain.Answer).length}
               {Object.entries(selectedDomain.Answer || {}).map(
                 ([key, value]) => (
                   <React.Fragment key={key}>
