@@ -59,8 +59,8 @@ export default function MyComponent() {
               key={domain}
               className={`card p-4 rounded shadow ${
                 fetchingStatus[domain]
-                  ? 'bg-danger text-white'
-                  : 'bg-success-200 hover:bg-gray-300 text-white cursor-pointer'
+                  ? 'bg-red-500 text-white'
+                  : 'bg-green-700 hover:bg-gray-300 text-white cursor-pointer text-center'
               }`}
               onClick={() => !fetchingStatus[domain] && handleCardClick(domain)}
             >
