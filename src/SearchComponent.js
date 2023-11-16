@@ -5,7 +5,6 @@ export default function MyComponent() {
   const [domainData, setDomainData] = React.useState({});
   const [fetchingStatus, setFetchingStatus] = React.useState({});
   const [selectedDomain, setSelectedDomain] = React.useState('');
-
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
@@ -60,8 +59,8 @@ export default function MyComponent() {
               key={domain}
               className={`card p-4 rounded shadow ${
                 fetchingStatus[domain]
-                  ? 'bg-gray-300'
-                  : 'bg-gray-200 hover:bg-gray-300 cursor-pointer'
+                  ? 'bg-danger text-white'
+                  : 'bg-success-200 hover:bg-gray-300 text-white cursor-pointer'
               }`}
               onClick={() => !fetchingStatus[domain] && handleCardClick(domain)}
             >
