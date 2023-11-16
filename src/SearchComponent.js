@@ -32,6 +32,7 @@ export default function MyComponent() {
 
   const handleCardClick = (domain) => {
     setSelectedDomain(domainData[domain]);
+
   };
 
   return (
@@ -53,14 +54,14 @@ export default function MyComponent() {
           </button>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 my-4">
+        <div className="grid grid-cols-4 gap-4 my-4">
           {Object.keys(fetchingStatus).map((domain) => (
             <div
               key={domain}
               className={`card p-4 rounded shadow ${
                 fetchingStatus[domain]
-                  ? 'bg-red-500 text-white'
-                  : 'bg-green-700 hover:bg-gray-300 text-white cursor-pointer text-center'
+                  ? 'bg-red-600 text-white text-center'
+                  : 'bg-green-600 hover:bg-green-700 text-white cursor-pointer text-center'
               }`}
               onClick={() => !fetchingStatus[domain] && handleCardClick(domain)}
             >
@@ -78,6 +79,7 @@ export default function MyComponent() {
               Close
             </button>
             <dl className="mt-4">
+            
               {Object.entries(selectedDomain.Answer || {}).map(
                 ([key, value]) => (
                   <React.Fragment key={key}>

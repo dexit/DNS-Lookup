@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "@violetnorth/whois": "^1.2.0",
     "babel": "6.23.0",
     "dos": "1.0.2",
     "dots": "^0.1.0",
